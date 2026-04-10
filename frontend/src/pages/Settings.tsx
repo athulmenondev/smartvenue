@@ -48,11 +48,11 @@ export default function Settings() {
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-400 mb-1">ML Service API Endpoint</label>
-              <input type="text" className="w-full bg-gray-900 border border-gray-600 rounded p-2 text-sm text-gray-300 focus:outline-none focus:border-blue-500" defaultValue={import.meta.env.VITE_ML_API_URL || "http://localhost:5000/api/"} />
+              <input type="text" className="w-full bg-gray-900 border border-gray-600 rounded p-2 text-sm text-gray-300 focus:outline-none focus:border-blue-500" defaultValue={import.meta.env.VITE_ML_API_URL || "https://ml-service-6xakglkw2a-uc.a.run.app/api/"} />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-400 mb-1">IoT Sensor Feed URL</label>
-              <input type="text" className="w-full bg-gray-900 border border-gray-600 rounded p-2 text-sm text-gray-300 focus:outline-none focus:border-blue-500" defaultValue={import.meta.env.VITE_IOT_SENSOR_URL || "wss://sensors.smartvenue.local/stream"} />
+              <input type="text" className="w-full bg-gray-900 border border-gray-600 rounded p-2 text-sm text-gray-300 focus:outline-none focus:border-blue-500" defaultValue={import.meta.env.VITE_IOT_SENSOR_URL || "wss://telemetry.smartvenue-cloud.app/stream"} />
             </div>
           </div>
         </div>
