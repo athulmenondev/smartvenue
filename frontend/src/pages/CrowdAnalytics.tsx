@@ -10,7 +10,7 @@ export default function CrowdAnalytics() {
     socket.on('crowd_update', setCrowdData);
     
     // Fallback if not connected or loading
-    fetch('http://localhost:3001/api/crowd')
+    fetch(`${import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'}/api/crowd`)
       .then(res => res.json())
       .then(data => {
         if(crowdData.length === 0) setCrowdData(data.data);
@@ -74,10 +74,10 @@ export default function CrowdAnalytics() {
                   outerRadius={100}
                   paddingAngle={5}
                   dataKey="value"
-                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                  label={({ name, percent }) => `${name} ${((percent || 0) * 100).toFixed(0)}%`}
                   labelLine={false}
                 >
-                  {pieData.map((entry, index) => (
+                  {pieData.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>

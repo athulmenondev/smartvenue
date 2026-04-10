@@ -25,10 +25,17 @@ def predict_queue():
         base_time = 1
         
     estimated_wait_time = base_time + (current_density * random.uniform(0.1, 0.5))
-    
+
+    # Trend analysis: Simulating whether the queue is likely to grow or shrink
+    # In a real ML model, this would be based on time-series forecasting (LSTM/ARIMA)
+    trend = random.choice(['increasing', 'decreasing', 'stable'])
+    confidence = round(random.uniform(0.7, 0.95), 2)
+
     return jsonify({
         'status': 'success',
         'predicted_wait_time_minutes': round(estimated_wait_time, 1),
+        'trend': trend,
+        'confidence': confidence,
         'timestamp': datetime.now().isoformat()
     })
 
@@ -49,5 +56,8 @@ def predict_heatmap():
     })
 
 
+import os
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', debug=True, port=port)
