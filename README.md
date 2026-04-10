@@ -8,6 +8,12 @@ By combining **Real-time Telemetry Simulation**, **Predictive AI Analytics**, an
 Most venue management tools are reactive. **SmartVenue AI is proactive.** It doesn't just tell you that a gate is crowded; it predicts the trend and suggests optimal routing to prevent a bottleneck before it happens.
 
 ---
+#Screenshots
+<img width="1881" height="915" alt="2026-04-10_17-41" src="https://github.com/user-attachments/assets/a240c975-ba4f-4036-ba08-fc54c13149ce" />
+<img width="1900" height="892" alt="2026-04-10_17-42" src="https://github.com/user-attachments/assets/c896ce78-d0b1-4854-bffd-51ed56920956" />
+<img width="1907" height="912" alt="2026-04-10_17-42_1" src="https://github.com/user-attachments/assets/08a622ca-2bed-4b32-9cd1-10e76e9b150c" />
+
+---
 
 ## 🛠️ Technical Architecture
 
